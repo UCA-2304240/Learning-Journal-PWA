@@ -547,7 +547,7 @@ body {
     z-index: 4;
     padding: 50px;
     display: grid;
-    grid-template-columns: 50px auto auto 170px;
+    grid-template-columns: 50px 2fr 1fr 3fr;
     gap: 50px;
     color: var(--light4);
     font: 12.5px var(--sans);
@@ -570,6 +570,14 @@ body {
     background-size: cover;
     border-left: solid 20px var(--dark2);
 }
+
+.choose-header-welcome-blurb {
+    resize: inherit;
+    background: inherit;
+    color: inherit;
+    width: 100%;
+}
+
 
 .choose-header-welcome-blurb::-webkit-scrollbar {
     background-color: transparent;
@@ -609,16 +617,16 @@ body {
     padding-right: 25px;
 }
 
-.choose-header-staff {
+.choose-header-music {
     display: flex;
+    justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    padding-top: 25px;
-    width: 250px !important;
+    padding: 15% 25px;
     flex-grow: 2;
 }
 
-.choose-header-staff a {
+.choose-header-music a {
     display: block;
     mix-blend-mode: lighten;
     border: solid 1px var(--border);
@@ -627,18 +635,18 @@ body {
     width: 60px;
 }
 
-.choose-header-staff a div {
+.choose-header-music a div {
     width: 60px;
     height: 60px;
     background-color: var(--blue1);
     transition: .5s;
 }
 
-.choose-header-staff a:hover div {
+.choose-header-music a:hover div {
     background-color: var(--red);
 }
 
-.choose-header-staff img {
+.choose-header-music img {
     height: 60px;
     width: 60px;
     mix-blend-mode: multiply;
@@ -656,11 +664,11 @@ body {
     animation: chooseSpin 120s linear infinite;
 }
 
-.choose-header-event {
+.choose-header-time {
     padding-top: 25px;
 }
 
-.choose-header-event-1 {
+.choose-header-time-1 {
     cursor: pointer;
     position: relative;
     z-index: 1;
@@ -682,7 +690,7 @@ body {
     letter-spacing: .5px;
 }
 
-.choose-header-event-1 b {
+.choose-header-time-1 b {
     font: 900 17px var(--title);
     line-height: 12px;
     color: var(--red);
@@ -690,7 +698,7 @@ body {
     transition: .5s;
 }
 
-.choose-header-event-1:hover b {
+.choose-header-time-1:hover b {
     color: var(--blue2);
 }
 

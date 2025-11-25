@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Journal</title>
     <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/fontAwesomePro.css">
+    <link rel="stylesheet" href="/css/musicPlayer.css">
+    <script src="js/musicPlayer.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 
 <body>
@@ -90,26 +94,10 @@
             <div class="choose-header-welcome">
                 <div class="choose-header-welcome-title"><span>breathe it in</span>
                     breathe it in</div>
-                <div class="choose-header-welcome-blurb">
-                    The word hurts, the word hurts in water, in water. The word hurts, the word hurts in water, in
-                    water.
-                    Material slowly unwinds as I leave feathers behind for your love, for your lover to find. Warm hands
-                    wrapped in blue linen from Torrington for your love, for your lover to find. Wild rose - Jericho sun
-                    -
-                    arid as stone for your love, for your lover to find. Aorta: tattoo the artery with acute artistry
-                    for
-                    your love, for your lover to find. Breathing, breathing underwater. Breathing, breathing underwater.
-                    Very good brea-breathing, breathing underwater.<br><br>
-
-                    Pleasure melting your snowflake of lace down your face for your love, for your lover to find. I
-                    could
-                    call your demons aside, soak them in chamomile for your love, for your lover to find. Breathing,
-                    breathing underwater. Breathing, breathing underwater. I could brea-breathe, breathe underwater to
-                    find,
-                    find, find - for your love, for your lover to find. For your love, for your lover to find.
-                </div>
+                <textarea class="choose-header-welcome-blurb">
+                </textarea>
             </div>
-            <div class="choose-header-event">
+            <div class="choose-header-time">
                 <div class="choose-header-svg">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="200px"
                         width="200px">
@@ -122,23 +110,31 @@
                         </text>
                     </svg>
                 </div>
-                <a href="" class="choose-header-event-1">
+                <a href="" class="choose-header-time-1">
                     <b>event name</b>
                     our newest event</a>
             </div>
-            <div class="choose-header-staff">
-                <a href="" title="staff name">
-                    <div><img src="https://i.ibb.co/jZPm1yK/14.png"></div>
-                </a>
-                <a href="" title="staff name">
-                    <div><img src="https://i.ibb.co/2cRgzbP/13.png"></div>
-                </a>
-                <a href="" title="staff name">
-                    <div><img src="https://i.ibb.co/gdJfgnJ/24.png"></div>
-                </a>
-                <a href="" title="staff name">
-                    <div><img src="https://i.ibb.co/H42vxcP/Surtr27.png"></div>
-                </a>
+            <div class="choose-header-music">
+                <div id="audio-box">
+                    <div id="audio-controls">
+                        <span id="volume" class="fas fa-volume-slash bounce"></span>
+                        <span id="rw" class="fas fa-backward"></span>
+                        <span id="play" class="fas fa-pause"></span>
+                        <span id="ff" class="fas fa-forward"></span>
+                        <span id="time-played"></span>
+                        <span id="song-name"></span>
+                    </div>
+                    <div style="flex: 0.5"></div>
+                    <div id="progress">
+                        <div id="audio-progress-dragger" class="unselectable">
+                            <img src="/images/Kawaii Art.gif">
+                        </div>
+
+                    </div>
+                </div>
+                <div id="player_wrapper">
+                    <div id="player"><span style="font-size: 3em;">Hard Reload if not autoplaying</span></div>
+                </div>
             </div>
 
         </div>

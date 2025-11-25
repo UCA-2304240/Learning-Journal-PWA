@@ -1,6 +1,5 @@
 // Date
-const dateContainer = document.querySelector('.choose-header-event-1');
-
+const dateContainer = document.querySelector('.choose-header-time-1');
 function updateDate() {
     
     let now = new Date();
@@ -12,7 +11,6 @@ function updateDate() {
         updateDate();
     }, 1000);
 }
-
 updateDate();
 
 // Banner Image
@@ -23,4 +21,15 @@ document.addEventListener('mousemove', (e) => {
     // const y = e.clientY / window.innerHeight;
     bannerImg.style.right = `${x * 2 + 40}%`;
     bannerTitle.style.left = `${x * 1 + 10}%`;
+});
+
+// localStorage for welcome text
+const welocomeContainer = document.querySelector('.choose-header-welcome-blurb');
+if(localStorage.getItem('welcomeText')) {
+    welocomeContainer.value = localStorage.getItem('welcomeText');
+} else {
+    welocomeContainer.value = "Customize your welcome message here. Be sure to unfocus before refreshing to save the text";
+}
+welocomeContainer.addEventListener('change', (e) => {
+    localStorage.setItem('welcomeText', e.target.value);
 });
