@@ -105,18 +105,9 @@ window.addEventListener('load', () => {
         }
     })
 
-
-    setInterval(() => {
-        time = player.getCurrentTime();
-        duration = player.getDuration();
-        playTime.innerText = getTimeCodeFromNum(time) + ' / ' + getTimeCodeFromNum(duration);
-        if (!mouse_down_on_prog) {
-            progCont.setAttribute('style', 'left: ' + (100 * time / duration).toFixed(3) + '%;');
-        }
-    }, 100)
-
     setInterval(() => {
         if(player == null) return;
+        if(player.videoTitle == "") return;
         time = player.getCurrentTime();
         duration = player.getDuration();
         playTime.innerText = getTimeCodeFromNum(time) + ' / ' + getTimeCodeFromNum(duration);

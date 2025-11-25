@@ -33,3 +33,9 @@ if(localStorage.getItem('welcomeText')) {
 welocomeContainer.addEventListener('change', (e) => {
     localStorage.setItem('welcomeText', e.target.value);
 });
+
+// token of the day
+fetch('./json/syncInfo.json').then(res => res.json()).then(data => {
+    let tokenDiv = document.querySelector(".choose-nav > div:nth-child(2)");
+    tokenDiv.innerText = data["dayToken"];
+});

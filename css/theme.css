@@ -716,14 +716,14 @@ body {
     gap: 15px;
 }
 
-.choose-nav a {
+.choose-nav div {
     text-decoration: none;
     color: var(--red);
     letter-spacing: 2px;
     transition: .5s;
 }
 
-.choose-nav a:first-of-type {
+.choose-nav div:first-of-type {
     color: var(--light3);
     border-right: solid 1px var(--border);
     margin: -19px 4px -19px 0px;
@@ -731,17 +731,17 @@ body {
     padding-right: 19px;
 }
 
-.choose-nav a:hover {
+.choose-nav div:hover {
     color: var(--blue2);
 }
 
-.choose-nav i {
+/* .choose-nav i {
     display: block;
     color: var(--light3);
     cursor: pointer;
     margin: -19px -15px -19px -19px;
     padding: 19px 8px 19px 19px;
-}
+} */
 
 
 
