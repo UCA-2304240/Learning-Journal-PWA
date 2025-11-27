@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="choose-wrapper">
+    <div class="choose-cat">
+        <div class="choose-cat-top">
+            <h1>Journal Entries</h1>
+        </div>
+        <div class="choose-cat-body">
+            {% for reflection in reflections %}
+            <div class="choose-board">
+                <div class="choose-board-name">
+                    <div>{{reflection.title}}</div>
+                    <b>{{reflection.sub_title}}</b>
+                </div>
+                <div class="choose-board-bulk">
+                    <div class="choose-board-sub">
+                        {% for tag in reflection.tags %}
+                        <div>{{tag}}</div>
+                        {% endfor %}
+                    </div>
+                    <div class="choose-board-desc">
+                        {{reflection.content | safe}}
+                    </div>
+                    <div class="choose-board-recent">
+                        written by <span>{{reflection.author}}</span>
+                        <div>{{reflection.date}}</div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+{% endblock %}

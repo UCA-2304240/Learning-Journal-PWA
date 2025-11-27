@@ -29,15 +29,15 @@ window.addEventListener('load', () => {
     playBtn.addEventListener("click", function (e) {
         if (player.getPlayerState() == 1) {
             player.pauseVideo();
-            playBtn.classList.remove("fa-pause");
-            playBtn.classList.add("fa-play");
-            progImg.src = '/images/Kawaii Art.png'
+            playBtn.classList.remove("ph-pause-fill");
+            playBtn.classList.add("ph-play-fill");
+            progImg.src = '/static/images/Kawaii Art.png'
 
         } else if (player.getPlayerState() == 2 || player.getPlayerState() == -1) {
             player.playVideo();
-            playBtn.classList.remove("fa-play");
-            playBtn.classList.add("fa-pause");
-            progImg.src = '/images/Kawaii Art.gif'
+            playBtn.classList.remove("ph-play-fill");
+            playBtn.classList.add("ph-pause-fill");
+            progImg.src = '/static/images/Kawaii Art.gif'
         }
     });
 
@@ -46,12 +46,12 @@ window.addEventListener('load', () => {
         volumeBtn.classList.remove("bounce");
         if (player.isMuted()) {
             player.unMute()
-            volumeBtn.classList.remove("fa-volume-slash");
-            volumeBtn.classList.add("fa-volume");
+            volumeBtn.classList.remove("ph-speaker-simple-slash-fill");
+            volumeBtn.classList.add("ph-speaker-simple-high-fill");
         } else {
             player.mute()
-            volumeBtn.classList.remove("fa-volume");
-            volumeBtn.classList.add("fa-volume-slash");
+            volumeBtn.classList.remove("ph-speaker-simple-high-fill");
+            volumeBtn.classList.add("ph-speaker-simple-slash-fill");
         }
     });
 
@@ -125,7 +125,6 @@ window.addEventListener('load', () => {
         }
     }, 10)
 
-    set_player_width();
 })
 
 function getTimeCodeFromNum(num) {
@@ -157,13 +156,3 @@ function onPlayerStateChange(e) {
         }
     }
 }
-
-function set_player_width() {
-    let w = document.getElementById('player_wrapper');
-    w.setAttribute('style', 'flex-basis: ' + (w.clientHeight * 16 / 9).toFixed(3) + 'px;');
-    // w.setAttribute('style', 'flex-basis: ' + 0);
-}
-
-window.addEventListener('resize', () => {
-    set_player_width();
-})

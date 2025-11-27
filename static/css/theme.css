@@ -24,9 +24,9 @@ body {
     --group5: #867BA7;
     --group6: #AD719B;
 
-    --miku: url(/images/Miku.png);
-    --bg: url(/images/Hatsune-BW.png);
-    --bg2: url(/images/Hatsune-BW2.png);
+    --miku: url(/static/images/Miku.png);
+    --bg: url(/static/images/Hatsune-BW.png);
+    --bg2: url(/static/images/Hatsune-BW2.png);
     --defaultIcon: url(/images/defaultIcon.png);
 
     --title: Playfair Display, serif;
@@ -80,9 +80,7 @@ body {
     min-width: 1185px;
     display: grid;
     grid-template-columns: clamp(300px, 25vw, 420px) auto;
-    /*grid-template-columns:25vw auto;*/
-    grid-template-rows: 60px 550px auto;
-    overflow: hidden;
+    grid-template-rows: 550px auto;
 }
 
 .choose-menu {
@@ -90,6 +88,7 @@ body {
     background-color: var(--light1);
     background: linear-gradient(to right, var(--light2) 50%, var(--red));
     background-size: 100% 100%;
+    width: 100%;
     position: relative;
     z-index: 2;
 }
@@ -154,7 +153,7 @@ body {
 
 .choose-side {
     background-color: var(--blue1);
-    grid-row: 2 / 4;
+    grid-row: 1 / 3;
     position: relative;
     z-index: 2;
     overflow: hidden;
@@ -353,6 +352,7 @@ body {
 .choose-banner {
     position: relative;
     background-color: var(--dark1);
+    user-select: none;
 }
 
 .choose-banner-back {
@@ -378,7 +378,7 @@ body {
     position: absolute;
     z-index: 3;
     margin-top: -80px;
-    right: 40%;
+    right: 45%;
     margin-right: -472px;
     overflow: visible;
     pointer-events: none;
@@ -999,7 +999,8 @@ body {
     justify-content: flex-end;
 }
 
-.choose-board-sub div, .choose-board-sub a {
+.choose-board-sub div,
+.choose-board-sub a {
     text-decoration: none;
     display: block;
     padding: 8px;
@@ -1016,7 +1017,8 @@ body {
     color: var(--dark3) !important;
 }
 
-.choose-board-sub div:hover, .choose-board-sub a:hover {
+.choose-board-sub div:hover,
+.choose-board-sub a:hover {
     background-color: var(--dark2);
     color: var(--red);
 }
@@ -1088,6 +1090,34 @@ body {
 
 .choose-board:hover .choose-board-recent span:nth-child(1) {
     color: var(--red);
+}
+
+.choose-board-recent-add {
+    position: relative;
+    left: 20px;
+    float: left;
+    top: -4px;
+    height: 100%;
+    background-color: var(--group3);
+    color: var(--dark0);
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.choose-board-recent-del {
+    position: relative;
+    left: 20px;
+    float: left;
+    top: -4px;
+    height: 100%;
+    background-color: var(--group1);
+    color: var(--dark0);
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+    user-select: none;
 }
 
 .choose-board.choose-ic {
@@ -1739,11 +1769,13 @@ body {
         grid-template-columns: auto;
         height: auto;
     }
+
     .choose-menu {
         grid-column: 1;
     }
+
     .choose-side {
-        grid-row: 4;
+        grid-row: 3;
     }
 
     .choose-guidebook {

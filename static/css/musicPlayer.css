@@ -1,15 +1,9 @@
-/* globals */
-@font-face {
-  font-family: "Font Awesome 5 Pro";
-  src: url(/fonts/fa-solid-900.woff2);
-}
-
-
 #player_wrapper {
-  margin-left: 5%;
+  flex: 1;
   height: 100%;
-  float: left;
   filter: opacity(0.4);
+  display: flex;
+  align-items: center;
 }
 
 #player {
@@ -29,7 +23,6 @@
 
 
 #audio-controls {
-  width: 100%;
   flex: 2;
   background-color: var(--dark0);
   padding: 0px 10px;
@@ -38,7 +31,7 @@
   align-items: center;
 }
 
-#audio-controls>span {
+#audio-controls>div {
   line-height: 100%;
   float: left;
 

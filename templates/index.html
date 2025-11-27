@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="/static/css/musicPlayer.css">
+<script defer src="/static/js/index.js"></script>
+<script src="/static/js/musicPlayer.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+{% endblock %}
+
+{% block main %}
+
+<div class="choose">
+    <div class="choose-side">
+        <div class="choose-side-back">
+            <div></div>
+        </div>
+        <div class="choose-side-front">
+            <div class="choose-side-nav" id="choose-fitty2">
+                <h1>quick navigation</h1>
+                <div>
+                    <a href="">guidelines</a>
+                    <a href="">premise</a>
+                    <a href="">setting</a>
+                    <a href="">member groups</a>
+                    <a href="">app guide</a>
+                    <a href="">claims</a>
+                    <a href="">site templates</a>
+                    <a href="">advertising</a>
+                    <a href="">affiliation</a>
+                    <a href="">moderation request</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="choose-banner">
+        <div class="choose-banner-back">
+            <div></div>
+        </div>
+        <div class="choose-banner-img">
+            <div></div>
+        </div>
+
+        <div class="choose-banner-svg-1">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="600px"
+                width="600px">
+                <path id="chooseText1" d="M 0 200 A 50 50 0 1 1 400 200 A 50 50 0 1 1 0 200 "
+                    transform="translate(100,100)" fill="none" />
+                <text>
+                    <textPath xlink:href="#chooseText1">
+                        Material slowly unwinds as I leave feathers behind for your love, for your lover to find.
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+        <div class="choose-banner-svg-2">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="900px"
+                width="900px">
+                <path id="chooseText2" d="M 0 350 A 50 50 0 1 1 700 350 A 50 50 0 1 1 0 350 "
+                    transform="translate(100,100)" fill="none" />
+                <text>
+                    <textPath xlink:href="#chooseText2">
+                        Material slowly unwinds as I leave feathers behind for your love, for your lover to find.
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+
+        <div class="choose-banner-title-1">
+            <div class="choose-banner-title">
+                <div>Learning</div>
+                <span></span>
+                <div class="choose-banner-title-2">Journal</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="choose-header">
+
+        <div class="choose-nav">
+            <div>Token of the Day</div>
+            <div>abcdefg</div>
+        </div>
+
+        <div class="choose-header-welcome">
+            <div class="choose-header-welcome-title"><span>breathe it in</span>
+                breathe it in</div>
+            <textarea class="choose-header-welcome-blurb">
+                </textarea>
+        </div>
+        <div class="choose-header-time">
+            <div class="choose-header-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="200px"
+                    width="200px">
+                    <path id="chooseText4" d="M 0 75 A 50 50 0 1 1 150 75 A 50 50 0 1 1 0 75 "
+                        transform="translate(25,25)" fill="none" />
+                    <text>
+                        <textPath xlink:href="#chooseText4">
+                            unprecendented activity at something academy ●
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+            <a href="" class="choose-header-time-1">
+                <b>event name</b>
+                our newest event</a>
+        </div>
+        <div class="choose-header-music">
+            <div id="audio-box">
+                <div id="audio-controls">
+                    <div id="volume" class="ph-speaker-simple-slash-fill bounce"></div>
+                    <div id="rw" class="ph-rewind-fill"></div>
+                    <div id="play" class="ph-pause-fill"></div>
+                    <div id="ff" class="ph-fast-forward-fill"></div>
+                    <div id="time-played"></div>
+                    <div id="song-name"></div>
+                </div>
+                <div style="flex: 0.5"></div>
+                <div id="progress">
+                    <div id="audio-progress-dragger" class="unselectable">
+                        <img src="/static/images/Kawaii Art.gif">
+                    </div>
+
+                </div>
+            </div>
+            <div id="player_wrapper">
+                <div id="player"><span style="font-size: 3em;">Hard Reload if not autoplaying</span></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

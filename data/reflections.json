@@ -1,0 +1,71 @@
+[
+    {
+        "title": "Lab 1",
+        "sub_title": "Introduction",
+        "tags": [
+            "Github",
+            "PythonAnywhere"
+        ],
+        "content": "When editing the respiratory, one difficulty I encountered was switching GitHub credentials, as my credentials were still the ones of my previous GitHub account. The solution was simple in that one simply switches an account in VScode, what is confusing at that time was that I thought the credentials had something to do with git, and then started looking deeply into git. Another difficulty along the way was hosting the web app using PythonAnywhere. Since the code given by the link is a static site, meaning there's no app.py, so I had to add a static directory under static files to host this static site. <Br> <Br> Outcome: <Br> <a href='https://github.com/UCA-2304240/TemperatureConverterPWA'>Github Respiratory</a> <Br> <a href='https://2304240.eu.pythonanywhere.com/'>PythonAnywhere </a>",
+        "author": "Ivan Yan",
+        "date": "01 / Oct / 2025"
+    },
+    {
+        "title": "Lab 2",
+        "sub_title": "Frontend Fundamentals",
+        "tags": [
+            "Html",
+            "CSS",
+            "Project Structure"
+        ],
+        "content": "Mobile First Design is practiced by constanly checking the design in mobile size. However, since the original template was made for laptop, therefore mobile adaptations exist in media queries. Furthermore, instead of using orientation, this website queries width, making it possible to display more info on high res phones. <Br> One useful concept of CSS applied is display type grid. I recently found it to be more flexible than the flexbox when it comes to making responsive UI. With flexbox, one would need to tweak the flex for each size individually for each element, which makes it hard to maintain. <Br> Throughout this lab, one challenge would sure be dealing with responsive UI. One had to think of one design in two ways. For example when using grid, one had to design it with the potential to adapt to mobile, thus extra grid-template-columns when that column is actually not used in the current working device size.",
+        "author": "Ivan Yan",
+        "date": "26 / Oct / 2025"
+    },
+    {
+        "title": "Lab 3",
+        "sub_title": "Javascript & Dom Manipulation",
+        "tags": [
+            "Reuse Components",
+            "User Interaction"
+        ],
+        "content": "I mainly use querySelector as it uses css selectors. It makes it easier to refractor styles as one don't have to recall whether they used getElementBy(ID/Class). <Br> The most challenging part when it comes to linking javascript to html would be the DOM Manipulation. There is many methods, like setting innerHTML, append, insertAdjacentHTML... <Br> To debug javscript, I maninly use console.log to find where the value start to go wrong. However, since currently the code is simple, i can go directly to the error by seeing the line count in the null reference error.",
+        "author": "Ivan Yan",
+        "date": "26 / Oct / 2025"
+    },
+    {
+        "title": "Lab 4",
+        "sub_title": "Introduction to API",
+        "tags": [
+            "Storage API",
+            "Browser API",
+            "Third Party API"
+        ],
+        "content": "I chose local storage, fetch, and Youtube API. Local storage is for things like theme customizations, fetch is for syncing files that might be updated often on ther server, and the youtube player to play music. <Br> For local storage, I decided to use it for a client customised message. To avoid the huge style difference when using &ltinput I tried the contenteditable attribute, however it won't trigger the change event. Therefore I used the &lttextarea>, as it has less differeniation from &ltdiv>. <Br> For Fetch, I initially decided to use it for fetching journal entries, however a major issue was that json did not supported multiline strings, thus in consideration of maitainability, this functionality was forfeited. <Br> For the Youtube API, I used code I written before, and the biggest challenge was recalling what I did before, as I had two versions, one uses Audio API to play mp3 url links, while one is styled differently and uses Youtube API. Also, the fact that onYouTubeIframeAPIReady() is not called every refresh is also quite misleading.",
+        "author": "Ivan Yan",
+        "date": "25 / Nov / 2025"
+    },
+    {
+        "title": "Lab 5",
+        "sub_title": "Python & Json Backend Data",
+        "tags": [
+            "Python",
+            "Json"
+        ],
+        "content": "By using a json file, data is stored on the server then fetched by the client. This helps with keeping the data up to date. To modify these json files with python, one would use python json package. In the PWA, a random token is generated in a python script, then put into the syncInfo.json, only to be fetched on loading of index.html by index.js to replace the token of the day bar.",
+        "author": "Ivan Yan",
+        "date": "25 / Nov / 2025"
+    },
+    {
+        "title": "Lab 6",
+        "sub_title": "Frontend & Backend",
+        "tags": [
+            "Flask",
+            "Jinja",
+            "Project Structure"
+        ],
+        "content": "The connection of frontend to backend creates the bridge between the client's action on a browser to the logic and true power of a pc, database, GPU computing... I used GET, POST, and DELETE, to implement functions exactly what the methods sound like. However, I do notice that one can potentially use PUT for the delete functionality, but I feel like that is too much power for the client. The biggest difference between using Flask vs Fetch for json files is that Flask provides a layer of abstraction and customization, for example one can freely change the json file path, or even use multiple data sources to combine into the final json file to be sent. The new feature I added is DELETE, a choice over PUT, as reflections should stay as a whole, an edit to a current reflection is a new reflection as the time of writing is different.",
+        "author": "Ivan Yan",
+        "date": "27 / Nov / 2025"
+    }
+]

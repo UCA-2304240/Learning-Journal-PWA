@@ -35,7 +35,7 @@ welocomeContainer.addEventListener('change', (e) => {
 });
 
 // token of the day
-fetch('./json/syncInfo.json').then(res => res.json()).then(data => {
+fetch('/data/syncInfo.json').then(res => res.json()).then(data => {
     let tokenDiv = document.querySelector(".choose-nav > div:nth-child(2)");
     tokenDiv.innerText = data["dayToken"];
 });
