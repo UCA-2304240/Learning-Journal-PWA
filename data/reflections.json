@@ -67,5 +67,16 @@
         "content": "The connection of frontend to backend creates the bridge between the client's action on a browser to the logic and true power of a pc, database, GPU computing... I used GET, POST, and DELETE, to implement functions exactly what the methods sound like. However, I do notice that one can potentially use PUT for the delete functionality, but I feel like that is too much power for the client. The biggest difference between using Flask vs Fetch for json files is that Flask provides a layer of abstraction and customization, for example one can freely change the json file path, or even use multiple data sources to combine into the final json file to be sent. The new feature I added is DELETE, a choice over PUT, as reflections should stay as a whole, an edit to a current reflection is a new reflection as the time of writing is different.",
         "author": "Ivan Yan",
         "date": "27 / Nov / 2025"
+    },
+    {
+        "title": "LAB 7",
+        "sub_title": "PROGRESSIVE WEB APPS",
+        "tags": [
+            "CACHING",
+            "OFFLINE STATUS"
+        ],
+        "content": "By making the website avaiable as a PWA, it lets user access the service even when offline, furthermore it also gives more control to caching, improving performence. To support offline access, all static files are cached, and a network first strategy is used for the others, cached on first access and use the cache if internet not available. An extra feature I added is the indication of offline status in the nav bar. One challenge I faced is figuring out why chrome did not show the install button for my PWA, and it turns out that I needed a 512x512 icon.",
+        "author": "IVAN YAN",
+        "date": "29 / NOV / 2025"
     }
 ]

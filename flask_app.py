@@ -33,7 +33,6 @@ def save_reflections(reflections):
 
 # pages
 @app.route("/")
-@app.route("/index")
 def index():
     return render_template("index.html")
 
@@ -53,6 +52,7 @@ def about():
 def projects():
     return render_template("projects.html")
 
+# other routes
 @app.route("/data/<filename>")
 def data(filename):
     if not filename.endswith(".json"):
@@ -62,6 +62,10 @@ def data(filename):
         with open(path, "r") as f:
             return json.load(f), 200
     return 404
+
+@app.route('/sw.js')
+def service_worker():
+    return app.send_static_file('js/sw.js')
 
 
 # Defines /api/reflections with GET method.

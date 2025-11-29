@@ -4,8 +4,12 @@
     {% block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA splash screen support Android -->
+    <meta name="theme-color" content="#ab4f4f">
+    <meta name="background-color" content="#202020">
     <title>Learning Journal</title>
-    <link rel="icon" type="image/png" href="/static/images/defaultIcon.png" />
+    <link rel="manifest" href="/static/manifest.json">
+    <link rel="icon" type="image/png" href="/static/images/defaultIcon192.png" />
     <link rel="stylesheet" href="/static/css/theme.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Passions+Conflict&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -13,6 +17,7 @@
     <script src="https://code.jquery.com/jquery-1.7.2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fitty/2.3.6/fitty.min.js"></script>
     <script src="https://unpkg.com/phosphor-icons"></script>
+    <script defer src="/static/js/global.js"></script>
     {% endblock %}
 </head>
 
@@ -24,6 +29,7 @@
             <a href="{{ url_for('journal')}}"><i class="ph-magnifying-glass-plus-fill"></i>journal</a>
             <a href="{{ url_for('about')}}"><i class="ph-users-three-fill"></i>about</a>
             <a href="{{ url_for('projects')}}"><i class="ph-gear-six-fill"></i>projects</a>
+            <div id="offline_icon" class="ph-wifi-slash" style="margin-right: 30px; margin-left: auto;"></div>
         </div>
     </div>
     {% endblock %}

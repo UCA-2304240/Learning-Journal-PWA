@@ -1,7 +1,7 @@
 // Date
 const dateContainer = document.querySelector('.choose-header-time-1');
 function updateDate() {
-    
+
     let now = new Date();
     let dateStr = now.toLocaleTimeString();
     dateStr += "<b>" + now.toLocaleDateString() + "</b>";
@@ -25,7 +25,7 @@ document.addEventListener('mousemove', (e) => {
 
 // localStorage for welcome text
 const welocomeContainer = document.querySelector('.choose-header-welcome-blurb');
-if(localStorage.getItem('welcomeText')) {
+if (localStorage.getItem('welcomeText')) {
     welocomeContainer.value = localStorage.getItem('welcomeText');
 } else {
     welocomeContainer.value = "Customize your welcome message here. Be sure to unfocus before refreshing to save the text";
@@ -39,3 +39,8 @@ fetch('/data/syncInfo.json').then(res => res.json()).then(data => {
     let tokenDiv = document.querySelector(".choose-nav > div:nth-child(2)");
     tokenDiv.innerText = data["dayToken"];
 });
+
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' });
+}

@@ -1,0 +1,24 @@
+{
+    "lang": "en-us",
+    "name": "Learning Journal PWA (2304240)",
+    "short_name": "Learning Journal",
+    "description": "A fully functioning progressive web application that communicates with a server backend and a reflective report documenting the development of the application, decisions made and outcomes of this unit that evidences the learning journey that contextualises practice within a critical framework.",
+    "start_url": "/",
+    "background_color": "#202020",
+    "theme_color": "#ab4f4f",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/static/images/defaultIcon512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/images/defaultIcon192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}
+

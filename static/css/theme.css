@@ -27,7 +27,7 @@ body {
     --miku: url(/static/images/Miku.png);
     --bg: url(/static/images/Hatsune-BW.png);
     --bg2: url(/static/images/Hatsune-BW2.png);
-    --defaultIcon: url(/images/defaultIcon.png);
+    --defaultIcon: url(/static/images/defaultIcon192.png);
 
     --title: Playfair Display, serif;
     --serif: Abril Fatface, serif;
