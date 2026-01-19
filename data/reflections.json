@@ -78,5 +78,17 @@
         "content": "By making the website avaiable as a PWA, it lets user access the service even when offline, furthermore it also gives more control to caching, improving performence. To support offline access, all static files are cached, and a network first strategy is used for the others, cached on first access and use the cache if internet not available. An extra feature I added is the indication of offline status in the nav bar. One challenge I faced is figuring out why chrome did not show the install button for my PWA, and it turns out that I needed a 512x512 icon.",
         "author": "IVAN YAN",
         "date": "29 / NOV / 2025"
+    },
+    {
+        "title": "MINI PROJECT",
+        "sub_title": "THE PONG",
+        "tags": [
+            "GAME",
+            "THREE.JS",
+            "SHADERS"
+        ],
+        "content": "For the mini project, I added a Pong Game with a CRT postprocessing effect. I chose this mostly because I want to apply my existing knowledge in webGL. The biggest challenge would be understanding the core of THREE.js. In Unity, the post processing effect would be done adding a new render feature, which use a material, which origins from a post processing shader. However, THREE.js is so basic that there is no render pipeline or the Blit function in Unity, so I had to set up two scenes, with the first rendering to a render texture, and the second uses the previous render texture and a quad to render to screen. I would improve the aesthetics more, for example more textures, a table for statistics. Furthermore, connecting with backend by uploading high scores.",
+        "author": "IVAN YAN",
+        "date": "14 / JAN / 2026"
     }
 ]

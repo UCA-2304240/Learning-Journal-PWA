@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/"
+  }
+}
+</script>
+{% endblock %}
+
+{% block main %}
+<div class="choose-wrapper">
+    <div class="choose-cat">
+        <div class="choose-cat-top">
+            <h1>The Pong</h1>
+        </div>
+        <div class="choose-cat-body">
+            <div class="choose-board choose-ic">
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <canvas id="pongCanvas"></canvas>
+                </div>
+                <div class="choose-board-bulk">
+                    <div class="choose-board-desc" id="info">
+                        A minimalistic pong game with CRT postprocessing effect.
+                        <br><br>
+                        Use W key to move up
+                        <br>
+                        Use S key to move down
+                    </div>
+
+                    <div class="choose-board-sub">
+                        <div id="resetGame">Reset Game</div>
+                        <div id="pauseGame">Resume Game</div>
+                    </div>
+
+                    <div class="choose-board-recent">
+                        Player: 
+                        <span id="player1_score">
+                            0
+                        </span>
+                        <Br>
+                        Computer: 
+                        <span id="player2_score">
+                            0
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <script type="module" src="/static/js/pong.js"></script>
+</div>
+{% endblock %}

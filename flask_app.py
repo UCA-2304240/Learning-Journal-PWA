@@ -52,6 +52,10 @@ def about():
 def projects():
     return render_template("projects.html")
 
+@app.route("/pong")
+def pong():
+    return render_template("pong.html")
+
 # other routes
 @app.route("/data/<filename>")
 def data(filename):
@@ -102,5 +106,4 @@ def delete_reflection():
 
 
 if __name__ == "__main__":
-    app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
     app.run()

@@ -14,6 +14,7 @@ const PRECACHE = [
     "/static/js/index.js",
     "/static/js/journalEdit.js",
     "/static/js/musicPlayer.js",
+    "/static/js/pong.js",
 ];
 
 
